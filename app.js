@@ -11,22 +11,18 @@ var bodyParser   = require('body-parser');
 const expressSwagger = require('express-swagger-generator')(app);
 
 var mascotasRoutes = require('./routes/mascota');
-
 var categoriaRoutes= require('./routes/categoria');
-
 var clienteRoutes = require('./routes/cliente');
-
 var servicioRoutes = require('./routes/servicio');
+var articuloRoutes = require('./routes/articulo');
+var ventaRoutes = require('./routes/venta');
 
 app.use(morgan('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
-
 var cors = require('cors')
-
 var whitelist = ['*']
 var corsOptions = {
   origin: function (origin, callback) {
@@ -37,9 +33,7 @@ var corsOptions = {
     }
   }
 }
-
 app.options('*', cors()) 
-
 app.use(cors())
 
 
@@ -78,7 +72,8 @@ app.use('/mascota', mascotasRoutes);
 app.use('/categoria',categoriaRoutes);
 app.use('/cliente', clienteRoutes);
 app.use('/servicio', servicioRoutes);
-
+app.use('/articulo', articuloRoutes);
+app.use('/venta', ventaRoutes);
 
 // launch ======================================================================
 

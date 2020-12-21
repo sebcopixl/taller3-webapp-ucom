@@ -11,7 +11,29 @@ router.get('/obtener-por-id/:id_cliente/:id_tipo_servicio', cors(), async (req, 
     console.log("servicio ", result);
     console.log("se encontró "+result.rowCount+" servicios")
     res.send(result.rows);
-  
 });
+
+
+router.get('', cors(), async(req, res, next) => {
+    console.log("lista servicios");
+    let result = await db.obtenerServicios();
+    console.log("se encontró "+result.rowCount+" servicios")
+    res.send(result.rows);
+});
+
+router.post('/insertar', cors(), async(req, res, next)=>{
+    console.log("insertar servicio")
+    var result={};
+    console.log("params", req.body);
+  
+    var servicio=req.body;
+    result= await db.insertarServicio(servicio);
+  
+    if(result.rows){
+        res.send(result.rows[0]);
+    }else{
+        res.send("No se pudo insertar");
+    }
+  });
 
 module.exports = router;
