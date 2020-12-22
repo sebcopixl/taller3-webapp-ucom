@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "b1ad4df6-275b-41e3-a557-8d8d51ca6f5b",
+		"name": "TallerIII-NodeJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Crear Servicio",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_cliente",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "id_mascota",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "id_tipo_servicio",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "en_proceso",
+							"type": "text"
+						},
+						{
+							"key": "fecha_servicio",
+							"value": "2020-12-21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3005/servicio/insertar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"servicio",
+						"insertar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Servicios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/servicio/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"servicio",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Articulo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "descripcion",
+							"value": "Bola de lana",
+							"type": "text"
+						},
+						{
+							"key": "precio_publico",
+							"value": "15000",
+							"type": "text"
+						},
+						{
+							"key": "precio_mayorista",
+							"value": "12000",
+							"type": "text"
+						},
+						{
+							"key": "activo",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3005/articulo/insertar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"articulo",
+						"insertar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Articulos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/articulo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"articulo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear Venta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id_cliente",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "monto_total",
+							"value": "25000",
+							"type": "text"
+						},
+						{
+							"key": "nro_factura",
+							"value": "001-001-0000012",
+							"type": "text"
+						},
+						{
+							"key": "activo",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3005/venta/insertar/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"venta",
+						"insertar",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Ventas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3005/venta/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3005",
+					"path": [
+						"venta",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
