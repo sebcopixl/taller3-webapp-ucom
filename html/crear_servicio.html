@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Servicio</title>
+</head>
+<body>
+    <h2>Solicitar Servicio</h2>
+    <form action="http://localhost:3005/servicio/insertar/" method="POST">
+        <label for="id_cliente">ID Cliente:</label><br>
+        <input type="text" id="id_cliente" name="id_cliente"><br>
+        <label for="id_mascota">ID Mascota:</label><br>
+        <input type="number" id="id_mascota" name="id_mascota"><br>
+        <label for="id_tipo_servicio">ID Tipo de Servicio:</label><br>
+        <input type="number" id="id_tipo_servicio" name="id_tipo_servicio"><br>
+        <label for="estado">Estado:</label><br>
+        <input type="text" id="estado" name="estado"><br>
+        <label for="fecha_servicio">Fecha del servicio:</label><br>
+        <input type="date" id="fecha_servicio" name="fecha_servicio"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

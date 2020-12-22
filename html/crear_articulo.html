@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Articulo</title>
+</head>
+<body>
+    <h2>Crear Articulo</h2>
+    <form action="http://localhost:3005/articulo/insertar/" method="POST">
+        <label for="descripcion">Descripcion:</label><br>
+        <input type="text" id="descripcion" name="descripcion"><br>
+        <label for="precio_publico">Precio Publico:</label><br>
+        <input type="number" id="precio_publico" name="precio_publico"><br>
+        <label for="precio_mayorista">Precio Mayorista:</label><br>
+        <input type="number" id="precio_mayorista" name="precio_mayorista"><br>
+        <label for="activo">Estado:</label>
+        <input type="checkbox" id="activo" name="activo" checked><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

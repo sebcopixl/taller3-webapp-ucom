@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venta</title>
+</head>
+<body>
+    <h2>Registrar Venta</h2>
+    <form action="http://localhost:3005/venta/insertar/" method="POST">
+        <label for="id_cliente">ID Cliente:</label><br>
+        <input type="number" id="id_cliente" name="id_cliente"><br>
+        <label for="monto_total">Monto Total:</label><br>
+        <input type="number" id="monto_total" name="monto_total"><br>
+        <label for="nro_factura">Nro Factura:</label><br>
+        <input type="text" id="nro_factura" name="nro_factura"><br>
+        <label for="activo">Estado:</label>
+        <input type="checkbox" id="activo" name="activo" checked><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
